@@ -1,0 +1,7 @@
+baudrate 230400
+
+-> uint8_t req_len (req_len == 0 has some special functions)
+-> uint8_t rsp_len
+-> uint8_t req[req_len]
+<- uint8_t rsp[rsp_len] (without CTS)
+<- uint8_t dummy byte for synchronization (if rsp_len == 0)
